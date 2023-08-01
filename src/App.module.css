@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, #6a6a6a, #c7c7c7);
+}
+
+.calculator {
+  display: grid;
+  
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: minmax(7rem, auto), repeat(5, 8rem);
+  background-color: #1d2128;
+}
+
+.button_wrapper {
+  aspect-ratio: 1/1;
+  margin: 10px 0px 0 0;
+}
+
+.span_two {
+  grid-column: span;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: rgb(22, 22, 22, 0.7);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.output .previous_op {
+  color: rgb(240, 240, 240);
+  font-size: 1.5rem;
+}
+
+.output .current_op {
+  color: rgb(240, 240, 240);
+  font-size: 2rem;
+}
+
+.calculator .button_wrapper>button {
+  /* padding: 25%; */
+  color: aliceblue;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid rgba(195, 50, 50, 0);
+  outline: none;
+  background-color: #292f39;
+  border-radius: 50%;
+  margin: 10px 10px 0 0;
+  transition: all .1s ease;
+}
+
+.calculator .button_wrapper>button:hover {
+  background-color: #2d3541;
+}
+
+.calculator .button_wrapper>button:active {
+  background-color: rgb(72, 78, 106);
+  border-radius: 45%;
+}
